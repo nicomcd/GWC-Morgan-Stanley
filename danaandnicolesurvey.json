@@ -1,0 +1,32 @@
+[
+  {
+    "What's your full name? ": 'dana',
+    'Do you use social media? ': 'ig',
+    "What's your major? ": 'life',
+    'What state do you live in? ': 'ny',
+    'How old are you? ': '17',
+    'What is one menthod of contact to reach you? ': 'calling',
+    "What's your social security? ": '76753646',
+    "What's your favorite food? ": 'baked ziti'
+  },
+  {
+    "What's your full name? ": 'nicole',
+    'Do you use social media? ': 'snap',
+    "What's your major? ": 'comp sci',
+    'What state do you live in? ': 'nj',
+    'How old are you? ': '17',
+    'What is one menthod of contact to reach you? ': 'email',
+    "What's your social security? ": '1234567890',
+    "What's your favorite food? ": 'kimbap'
+  },
+  {
+    "What's your full name? ": 'gus',
+    'Do you use social media? ': 'twitter',
+    "What's your major? ": 'culinary',
+    'What state do you live in? ': 'arkansas',
+    'How old are you? ': '42',
+    'What is one menthod of contact to reach you? ': 'snail mail',
+    "What's your social security? ": '123454322343',
+    "What's your favorite food? ": 'grapefruit'
+  }
+]
