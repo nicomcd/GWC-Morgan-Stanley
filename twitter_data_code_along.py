@@ -13,7 +13,7 @@ from wordcloud import WordCloud
 
 # Next we want to open the JSON file. We tag this file as
 # "r" read only because we are only going to look at the data.
-tweetFile = open("../Desktop/tweets_small.json", "r")
+tweetFile = open("../GirlsWhoCode-2019-Morgan-Stanley-NYC/tweets_small.json", "r")
 
 # We use the JSON library to get data from the file as JSON data.
 tweetData = json.load(tweetFile)
