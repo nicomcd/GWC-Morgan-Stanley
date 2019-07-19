@@ -30,6 +30,25 @@ for y in range (0, len(tweetData)):
 '''for z in range(0, len(tweet_texts)):
 print(tweet_texts[z])'''
 
+def wordCount(tweetstring, string1):
+	counter = 0
+	string1 = string1.lower()
+	wordList = tweetstring.split(' ')
+	for item in wordList:
+		if item == string1:
+			counter += 1
+	return counter
+
+wordCountList = []
+for item in tweet_texts:
+	wordoccurrences = wordCount(item, "the")
+	wordCountList.append(wordoccurrences)
+print(wordCountList)
+
+plt.hist(wordCountList)
+# print(min(wordCountList)), (max(wordCountList))
+plt.show()
+
 #combines values into big string
 tweetString = ""
 for tweet in tweet_texts:
@@ -46,24 +65,32 @@ plt.axis("off")'''
 # plt.show()
 # plt.savefig('nicolescloud.png')
 
-'''
-a_counter = 0
-b_counter = 0
-for g in range(0, len(tweet_texts)):
-	if "a" in tweet_texts[g]:
-		a_counter += 1
-	if "b" in tweet_texts[g]:
-		b_counter += 1
-# print(f"Amount of 'a' in tweets: {a_counter}.")
-# print(f"Amount of 'b' in tweets: {b_counter}.")
-'''
+
+def countLetter(string, letter):
+	counter = 0
+	for let in string:
+		if let.lower() == letter:
+			counter += 1
+	return counter
+
+alpha = ['a', 'g', 'v', 'j', 'o', 'y', 'b', 'w', 'u', 'x', 'n', 'r', 'p', 'f', 'k', 't', 'z', 'e', 'i', 'm', 'c', 'l', 'h', 'q', 'd', 's']
+letters = sorted(alpha)
+
+occurrences = []
+for letter in letters:
+	occurrences.append(countLetter(tweetString, letter))
+	# print(f"Letter:{letter} Occurrences:{countLetter(tweetString, letter)}!")
+
+plt.hist(occurrences)
+# print(min(occurrences)), (max(occurrences))
+# plt.show()
 
 polarities_list = []
 for x in range(0, len(tweet_texts)):
 	tweet_text = TextBlob(tweet_texts[x])
 	polarities_list.append(tweet_text.polarity)
+# print(polarities_list)
 
-print(polarities_list)
 
 ##make tweetsData[i]['id']
 list_of_twitter_data = []
@@ -76,13 +103,13 @@ for i in range(0, len(tweetData)):
 
 ###Histogram
 plt.hist(polarities_list)
-print(min(polarities_list)), (max(polarities_list))
+# print(min(polarities_list)), (max(polarities_list))
 plt.xlabel('Tweets')
 plt.ylabel('Sentiment')
 plt.title('Histogram of Sentiment')
 # plt.text(60, .025, r'$\mu=100,\ \sigma=15$')
 # plt.axis([-0.55, 1.05, 0.0, 75])
-plt.show()
+# plt.show()
 
 '''
 # sum_likes = 0
