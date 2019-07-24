@@ -1,20 +1,22 @@
-var names = ["NICOLE", "NIKI", "NIK", "NIKKI", "NICO", "NICHOLAS"];
-var nam = 0;
+console.log("Hello World!");
+var names = ['NICOLE', 'NIKI', 'NIK', 'NIKKI', 'NICO'];
+var pos = 0;
+var loc = document.getElementById('specialfont');
 
-var nam = document.getElementById("specialfont");
-function changenames(){
-  nam.innerHTML = names[pos];
+function changeNames(){
+  loc.innerHTML = names[pos];
   pos ++;
   if (pos >= names.length){
     pos = 0;
   }
 }
 
+
 var colors = ["black", "red", "green", "blue", "yellow", "purple", "orange"];
 var coz = 0;
 
 function changeColor(){
-  document.getElementById("specialfont").style.color = colors[coz];
+  loc.style.color = colors[coz];
   coz ++;
   if (coz >= colors.length){
     coz = 0;
@@ -22,11 +24,11 @@ function changeColor(){
 }
 
 
-var fonts = ["'Darker Grotesque', sans-serif", "'Bonbon', cursive", "'Hanalei', cursive"];
+var fonts = ['Darker Grotesque', sans-serif, 'Bonbon', cursive, 'Hanalei', cursive];
 var poz = 0;
 
 function changeFont(){
-document.getElementById("specialfont").style.fontFamily = fonts[poz];
+  loc.innerHTML = fonts[poz];
   //foz.setAttribute("style", 'font-family: ${fonts[poz]}');
   //like f"{}" in python
   poz ++;
@@ -37,8 +39,10 @@ document.getElementById("specialfont").style.fontFamily = fonts[poz];
 
 
 document.getElementById("specialfont").addEventListener("click",
-function(){
-  alert("You've downloaded a virus!");
-  document.getElementById("specialfont").style.color = "pink";
+  function(){
+    alert("You've downloaded a virus!");
+      document.getElementById("specialfont").style.color = "pink";
+      changeNames();
+      changeFont();
   }
 )
