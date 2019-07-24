@@ -1,30 +1,24 @@
 var names = ["NICOLE", "NIKI", "NIK", "NIKKI", "NICO", "NICHOLAS"];
-var pos = 0;
-var loc = document.getElementById("name")
+var nam = 0;
 
-
+var nam = document.getElementById("specialfont");
 function changenames(){
-  loc.innerHTML = name[pos];
+  nam.innerHTML = names[pos];
   pos ++;
   if (pos >= names.length){
     pos = 0;
   }
 }
 
-
-var foz = document.getElementById("name");
-console.log(foz)
-
 var colors = ["black", "red", "green", "blue", "yellow", "purple", "orange"];
 var coz = 0;
 
-function changeFontColor(){
-  foz.style.fontcolor = colors[coz];
+function changeColor(){
+  document.getElementById("specialfont").style.color = colors[coz];
   coz ++;
   if (coz >= colors.length){
     coz = 0;
   }
-  foz.style.color = "red", "blue", "black", "green", "yellow";
 }
 
 
@@ -32,7 +26,7 @@ var fonts = ["'Darker Grotesque', sans-serif", "'Bonbon', cursive", "'Hanalei', 
 var poz = 0;
 
 function changeFont(){
-  foz.style.fontFamily = fonts[poz];
+document.getElementById("specialfont").style.fontFamily = fonts[poz];
   //foz.setAttribute("style", 'font-family: ${fonts[poz]}');
   //like f"{}" in python
   poz ++;
@@ -40,3 +34,11 @@ function changeFont(){
     poz = 0;
   }
 }
+
+
+document.getElementById("specialfont").addEventListener("click",
+function(){
+  alert("You've downloaded a virus!");
+  document.getElementById("specialfont").style.color = "pink";
+  }
+)
