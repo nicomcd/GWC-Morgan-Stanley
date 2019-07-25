@@ -24,11 +24,11 @@ function changeColor(){
 }
 
 
-var fonts = ['Darker Grotesque', sans-serif, 'Bonbon', cursive, 'Hanalei', cursive];
+var fonts = ["'Darker Grotesque', sans-serif, 'Bonbon', cursive, 'Hanalei', cursive"];
 var poz = 0;
 
 function changeFont(){
-  loc.innerHTML = fonts[poz];
+  loc.style.fontFamily = fonts[poz];
   //foz.setAttribute("style", 'font-family: ${fonts[poz]}');
   //like f"{}" in python
   poz ++;
