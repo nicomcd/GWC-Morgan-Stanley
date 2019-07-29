@@ -23,26 +23,10 @@ function changeColor(){
   }
 }
 
-
-var fonts = ["'Darker Grotesque', sans-serif, 'Bonbon', cursive, 'Hanalei', cursive"];
-var poz = 0;
-
-function changeFont(){
-  loc.style.fontFamily = fonts[poz];
-  //foz.setAttribute("style", 'font-family: ${fonts[poz]}');
-  //like f"{}" in python
-  poz ++;
-  if (poz >= fonts.length){
-    poz = 0;
-  }
-}
-
-
 document.getElementById("specialfont").addEventListener("click",
   function(){
     alert("You've downloaded a virus!");
       document.getElementById("specialfont").style.color = "pink";
       changeNames();
-      changeFont();
   }
 )
